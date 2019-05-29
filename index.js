@@ -4,7 +4,7 @@ var $ = require('dombo');
 var electron = tryRequire('electron');
 var remote = electron ? electron.remote : tryRequire('remote');
 
-var mouseConstructor = tryRequire('osx-mouse') || tryRequire('win-mouse');
+var mouseConstructor = tryRequire('osx-mouse-cocoa') || tryRequire('win-mouse');
 
 var supported = !!mouseConstructor;
 var noop = function() {};
